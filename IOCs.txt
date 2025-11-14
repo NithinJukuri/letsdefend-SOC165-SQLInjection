@@ -1,0 +1,26 @@
+
+# IOCs - Indicators of Compromise
+# Case: LetsDefend SOC165 - SQL Injection Attempt
+
+## Malicious Source IP
+167.99.169.17
+
+## Malicious Payloads
+" OR 1 = 1 -- -
+'
+' OR '1
+' OR 'x'='x
+1' ORDER BY 3 --
+
+## Targeted URL
+https://172.16.17.18/search/?q=" OR 1 = 1 -- -
+
+## User-Agent Used by Attacker
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1
+
+## Destination IP
+172.16.17.18
+
+## Attack Vector
+HTTP GET Request (SQL Injection Attempt)
+
